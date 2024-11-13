@@ -74,7 +74,9 @@ public class BookPackage extends JFrame {
                 c1.add("Bronze Package");
                 c1.setBounds(271, 110, 150, 30);
                 add(c1);
-                
+
+
+		
                 JLabel la3 = new JLabel("Total Persons");
 		la3.setBounds(35, 150, 200, 14);
 		contentPane.add(la3);
@@ -120,6 +122,7 @@ public class BookPackage extends JFrame {
 		contentPane.add(l5);
                 
                 try{
+			
                     Conn c = new Conn();
                     ResultSet rs = c.s.executeQuery("select * from customer where username = '"+username+"'");
                     while(rs.next()){
