@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-
-
-
 <project name="Travel_Management_System" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Travel Management System.</description>
+    <!-- Project Description -->
+    <description>
+        Builds, tests, and runs the Travel Management System project.
+    </description>
+
+    <!-- Import the default NetBeans build implementation -->
     <import file="nbproject/build-impl.xml"/>
 
+    <!-- Custom Properties -->
+    <property name="project.name" value="Travel_Management_System"/>
+    <property name="source.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="test.dir" value="test"/>
 
+    <!-- Documentation Target -->
+    <target name="generate-docs" description="Generate project documentation using Javadoc">
+        <mkdir dir="${dist.dir}/docs"/>
+        <javadoc destdir="${dist.dir}/docs" sourcepath="${source.dir}" classpath="${build.dir}/classes">
+            <fileset dir="${source.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
 
+    <!-- Cleanup Target -->
+    <target name="clean-extra" description="Clean extra files generated during development">
+        <delete dir="${build.dir}/temp"/>
+        <delete file="${build.dir}/debug.log"/>
+    </target>
+
+    <!-- Print Properties Target -->
+    <target name="print-properties" description="Print important project properties">
+        <echo message="Project Name: ${project.name}"/>
+        <echo message="Source Directory: ${source.dir}"/>
+        <echo message="Build Directory: ${build.dir}"/>
+        <echo message="Distribution Directory: ${dist.dir}"/>
+        <echo message="Test Directory: ${test.dir}"/>
+    </target>
+
+    <!-- Welcome Message Target -->
+    <target name="welcome" description="Display a welcome message">
+        <echo message="Welcome to the Travel Management System Build Process!"/>
+    </target>
 </project>
