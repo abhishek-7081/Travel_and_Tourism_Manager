@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #8eb7ff;
+}
+
+.table-container {
+    margin: 20px;
+}
+
+.modal-header {
+    background-color: #8eb7ff;
+    color: white;
+}
+
+.footer {
+    background-color: #8eb7ff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
