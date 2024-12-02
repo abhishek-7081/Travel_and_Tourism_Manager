@@ -18,13 +18,13 @@ userForm.addEventListener('submit', (e) => {
     document.getElementById('emailError').innerText = '';
     document.getElementById('roleError').innerText = '';
 
-    // Validate Name
+    // Validating Name
     if (userName === '') {
         document.getElementById('nameError').innerText = 'Name is required.';
         isValid = false;
     }
 
-    // Validate Email
+    // Validating Email
     if (userEmail === '') {
         document.getElementById('emailError').innerText = 'Email is required.';
         isValid = false;
@@ -33,7 +33,7 @@ userForm.addEventListener('submit', (e) => {
         isValid = false;
     }
 
-    // Validate Role
+    // Validating Role
     if (userRole === '') {
         document.getElementById('roleError').innerText = 'Role is required.';
         isValid = false;
