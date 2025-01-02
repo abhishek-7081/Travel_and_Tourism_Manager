@@ -10,6 +10,7 @@ This project demonstrates a basic integration of Servlets, JSP, and a simple MVC
 │   │   └── com
 │   │       ├── exa
 │   │       │   └── service
+│   │       │       ├── UserProfileServlet.java
 │   │       │       └── UserServiceTest.java
 │   │       └── example
 │   │           └── dao
