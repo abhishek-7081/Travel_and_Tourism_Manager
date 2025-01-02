@@ -3,9 +3,11 @@ const userForm = document.getElementById('userForm');
 const userTable = document.getElementById('userTable');
 let userCount = 0;
 
+
 // Form Validation and Add User
 userForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
 
     const userName = document.getElementById('userName').value.trim();
     const userEmail = document.getElementById('userEmail').value.trim();
@@ -14,17 +16,20 @@ userForm.addEventListener('submit', (e) => {
     let isValid = true;
 
     // Clear previous errors
+    
     document.getElementById('nameError').innerText = '';
     document.getElementById('emailError').innerText = '';
     document.getElementById('roleError').innerText = '';
 
     // Validating Name
+    
     if (userName === '') {
         document.getElementById('nameError').innerText = 'Name is required.';
         isValid = false;
     }
 
     // Validating Email
+    
     if (userEmail === '') {
         document.getElementById('emailError').innerText = 'Email is required.';
         isValid = false;
@@ -34,6 +39,7 @@ userForm.addEventListener('submit', (e) => {
     }
 
     // Validating Role
+    
     if (userRole === '') {
         document.getElementById('roleError').innerText = 'Role is required.';
         isValid = false;
