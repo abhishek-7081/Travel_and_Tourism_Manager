@@ -22,6 +22,7 @@ pom.xml
 profile.jsp
 userForm.jsp
 userList.jsp
+readme.md (for documentation and basic file overview)
 
 
 
